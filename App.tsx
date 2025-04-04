@@ -66,7 +66,10 @@ function App(): React.JSX.Element {
   };
 
   useEffect(() => {
-    activate('9c810afd-4b86-43d6-9a14-eaabfb5a3b17');
+    // activate('9c810afd-4b86-43d6-9a14-eaabfb5a3b17');
+    //          'a03a980b-009b-4550-b999-a0a8b08d5912'
+    //
+    activate('a03a980b-009b-4550-b999-a0a8b08d5912');
   }, []);
 
   const onPress = useCallback(() => {

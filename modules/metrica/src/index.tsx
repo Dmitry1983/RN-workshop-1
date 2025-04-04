@@ -2,6 +2,8 @@ import {NativeModules} from 'react-native';
 
 const {Metrica} = NativeModules;
 
+console.log({NativeModules});
+
 console.log('Metrica', Metrica);
 
 export function activate(apiKey: string) {

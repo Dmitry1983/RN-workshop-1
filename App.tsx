@@ -79,6 +79,20 @@ function App(): React.JSX.Element {
     });
   }, []);
 
+  const onPressSecond = useCallback(() => {
+    reportEvent('click on section two', {
+      fromPlatform: Platform.OS,
+      isNative: true,
+    });
+  }, []);
+
+  const onPressTherd = useCallback(() => {
+    reportEvent('click on section tree', {
+      fromPlatform: Platform.OS,
+      isNative: true,
+    });
+  }, []);
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -99,12 +113,16 @@ function App(): React.JSX.Element {
               screen and then come back to see your edits.
             </Section>
           </TouchableOpacity>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
+          <TouchableOpacity onPress={onPressSecond}>
+            <Section title="See Your Changes">
+              <ReloadInstructions />
+            </Section>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={onPressTherd}>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+          </TouchableOpacity>
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>

@@ -86,6 +86,13 @@ function App(): React.JSX.Element {
     });
   }, []);
 
+  const onPressTherd = useCallback(() => {
+    reportEvent('click on section tree', {
+      fromPlatform: Platform.OS,
+      isNative: true,
+    });
+  }, []);
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar

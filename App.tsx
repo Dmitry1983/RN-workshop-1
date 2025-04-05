@@ -86,13 +86,6 @@ function App(): React.JSX.Element {
     });
   }, []);
 
-  const onPressTherd = useCallback(() => {
-    reportEvent('click on section tree', {
-      fromPlatform: Platform.OS,
-      isNative: true,
-    });
-  }, []);
-
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -118,11 +111,9 @@ function App(): React.JSX.Element {
               <ReloadInstructions />
             </Section>
           </TouchableOpacity>
-          <TouchableOpacity onPress={onPressTherd}>
-            <Section title="Debug">
-              <DebugInstructions />
-            </Section>
-          </TouchableOpacity>
+          <Section title="Debug">
+            <DebugInstructions />
+          </Section>
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>

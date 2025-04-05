@@ -118,9 +118,11 @@ function App(): React.JSX.Element {
               <ReloadInstructions />
             </Section>
           </TouchableOpacity>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
+          <TouchableOpacity onPress={onPressTherd}>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+          </TouchableOpacity>
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
